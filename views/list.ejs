@@ -1,0 +1,32 @@
+<%- include('header') -%>
+
+    <div class="appTitle">
+        <h1>To-Do-List</h1>
+    </div>
+    <div class="box boxDecoration">
+        <h2> <%= kindOfDay %> </h2>
+    </div>
+    <div class="box">
+        <% for (var i = 0; i < tasks.length; i++) { %>
+            <div class="item">
+                <input type="checkbox">
+                <p> <%= tasks[i] %>  </p>
+                <form class="item" action="/delete" method="POST">
+                    <input type="text" name="index" hidden value= <%= [i] %> >
+                    <button type="submit" class="deleteButton"> X </button>
+                </form>
+            </div>
+        <% }; %>
+        <form class="item" action="/" method="POST">
+            <input type="text" name="inputTask" autocomplete="off" placeholder="New Task">
+            <button type="submit"> + </button>
+        </form>
+    </div>
+
+<%- include('footer') -%>
+
+
+
+
+
+
