@@ -1,5 +1,6 @@
 # To-Do-List
-Creating "To-Do-List" using EJS
+Creating "To-Do-List" using EJS.
+
 The backend runs with node.js and express.js.
 
 <em>In the app you can add and delete (as well as cross out) goals you set for the day.</em>
